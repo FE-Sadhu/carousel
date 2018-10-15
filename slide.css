@@ -1,0 +1,83 @@
+/* 清除默认样式 */
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+/* 总div */
+div.container{
+    position: relative;
+    width: 600px;
+    height: 400px;
+    margin: 100px auto 0 auto;
+    box-shadow: 0 0 5px aqua;
+    overflow: hidden;
+}
+/* 图片区 */
+div.container div.wrap{
+    position: absolute;
+    width: 4200px;
+    height: 400px;
+    z-index: 1;
+}
+
+div.container div.wrap img{
+    width: 600px;
+    height: 400px;
+    float: left;
+}
+/* 按钮区 */
+div.container div.button{
+    position: absolute;
+    right: 225px;
+    bottom: 15px;
+    width: 150px;
+    height: 20px;
+    z-index: 2;
+    text-align: center;
+}
+
+div.container div.button span{
+    margin-left: 5px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: greenyellow;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    opacity: 0.6;
+}
+/* 轮播到哪张图，哪个按钮有这个效果，与其他按钮有个区别。 */
+div.container div.button span.on{
+    opacity: 1;
+}
+/* 箭头区 */
+div.container .jt{
+    position: absolute;
+    top: 40%;
+    color:greenyellow;
+    padding: 0px 14px;
+    font-size: 55px;
+    text-align: center;
+    z-index: 2;
+    display: none;
+}
+
+div.container .jt_left{
+    left: 10px;
+}
+
+div.container .jt_right{
+    right: 10px;
+}
+
+div.container:hover .jt{
+    display: block;
+    opacity: 0.4;
+}
+
+div.container .jt:hover{
+    opacity: 1;
+}
